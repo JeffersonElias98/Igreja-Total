@@ -1,0 +1,35 @@
+Política de Privacidade – Igreja Total
+A transparência e a proteção de dados são pilares fundamentais da plataforma Igreja Total. Esta política descreve como a JL Soluções Digitais trata as informações coletadas para garantir a operação segura do seu ministério.
+
+1. Coleta e Tratamento de Dados
+Dados Institucionais: Coletamos informações da Igreja (CNPJ, endereço e contatos) estritamente para fins de faturamento, emissão de notas fiscais e personalização do sistema.
+
+Dados de Membros e Gestão: O sistema processa informações inseridas exclusivamente pela Igreja (membros, histórico financeiro, registros de patrimônio, pequenos grupos e ministérios). Esses dados são utilizados apenas para a execução das funcionalidades contratadas.
+
+2. Finalidade do Uso dos Dados
+As informações armazenadas no sistema possuem finalidades operacionais específicas, tais como:
+
+Geração de relatórios financeiros e gerenciais.
+
+Uso da plataforma de ensino (EBD).
+
+Controle de presença em eventos.
+
+Organização de álbuns de fotos.
+
+Inventário de patrimônio.
+
+Marketing: A JL Soluções Digitais não utiliza esses dados para fins de marketing próprio ou de terceiros, e jamais vende ou compartilha informações de membros para fins publicitários.
+
+3. Segurança e Armazenamento
+Criptografia: Utilizamos protocolos de segurança avançados e criptografia para garantir que dados financeiros, registros de membros e arquivos de mídia fiquem protegidos contra acessos não autorizados.
+
+Hospedagem: Os dados são armazenados em servidores de alta disponibilidade e segurança, garantindo a integridade dos arquivos e backups constantes.
+
+4. Controle do Administrador e Acesso de Membros
+Autonomia de Privacidade: O Administrador da Igreja tem total poder para decidir quais informações serão públicas ou privadas no site gerado automaticamente pela plataforma.
+
+Áreas Restritas: O acesso de membros a cursos, materiais da EBD e áreas exclusivas é validado por credenciais e senhas geradas pelo administrador, garantindo que o conteúdo seja acessado apenas por pessoas autorizadas.
+
+5. Retenção de Dados
+Em conformidade com nossas políticas de segurança, os dados permanecem sob custódia da plataforma enquanto a assinatura estiver ativa. Em caso de rescisão ou inadimplência, respeitamos o prazo de 30 dias de arquivamento antes da exclusão definitiva, conforme previsto nos Termos de Uso.

@@ -1,0 +1,38 @@
+Conformidade com a LGPD (Lei Geral de Proteção de Dados)
+
+O Igreja Total opera em estrita conformidade com a Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais), garantindo segurança e transparência no tratamento de dados da sua congregação.
+
+1. Definição de Papéis
+Para os fins da lei, as responsabilidades são divididas da seguinte forma:
+
+A Igreja (Controladora): É a detentora dos dados e responsável por obter o consentimento dos seus membros e frequentadores para o tratamento de suas informações dentro do sistema.
+
+Igreja Total / JL Soluções Digitais (Operador): Realiza o processamento e o tratamento dos dados sob as ordens e configurações definidas pelo administrador da Igreja através das funcionalidades do software.
+
+2. Base Legal para o Tratamento
+O tratamento de dados (cadastrais, financeiros e de ministérios) dentro da plataforma é fundamentado em dois pilares legais:
+
+Execução de Contrato: Necessário para a prestação dos serviços de gestão contratados pela Igreja.
+
+Legítimo Interesse: Para a organização administrativa, segurança e funcionamento das atividades da instituição religiosa.
+
+3. Direitos dos Titulares (Membros)
+O sistema foi projetado para que a Igreja possa atender prontamente aos pedidos de seus membros, oferecendo ferramentas para:
+
+Acesso e Correção: Consulta e atualização de dados cadastrais.
+
+Exclusão: A Igreja possui total autonomia para excluir dados de qualquer membro a qualquer momento através do painel administrativo.
+
+Portabilidade: Exportação de relatórios conforme a necessidade da instituição.
+
+4. Segurança, Sigilo e Auditoria
+Proteção de Dados: Mantemos registros de logs de acesso e auditoria interna para garantir que apenas pessoas autorizadas manipulem informações sensíveis de pequenos grupos, ministérios e finanças.
+
+Retenção e Descarte: Após a rescisão do contrato e o prazo de carência de 30 (trinta) dias, a exclusão total e definitiva dos dados é realizada automaticamente pela plataforma. Esta medida visa proteger a privacidade dos titulares e garantir que nenhum dado pessoal seja mantido sem uma base legal ativa.
+
+5. Direito ao Cancelamento e Exclusão Permanente
+Autonomia de Rescisão: A Igreja tem o direito de cancelar o plano a qualquer momento, sem obrigatoriedade de permanência.
+
+Exclusão Imediata: Caso seja do interesse da Igreja, ela poderá solicitar a exclusão permanente e imediata de todos os seus dados, registros e arquivos dos nossos servidores logo após o cancelamento.
+
+Irreversibilidade: Uma vez confirmada a exclusão permanente a pedido da Igreja, os dados não poderão ser recuperados, sendo este um ato definitivo para garantir a privacidade total dos titulares.
