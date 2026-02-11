@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Ajuda - Igreja Total</title>
+    <meta name="description"
+        content="Central de Ajuda do Igreja Total. Encontre tutoriais, manuais e suporte para sua igreja.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            900: '#1e3a8a',
+                        },
+                        accent: '#06b6d4',
+                        dark: '#0f172a',
+                        surface: '#1e293b',
+                    },
+                    animation: {
+                        'fade-up': 'fadeUp 0.8s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                    }
+                }
+            }
+        }
+
+        // Função para abrir o modal
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        // Função para fechar o modal
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Fechar o modal com ESC
+        document.addEventListener('keydown', function (event) {
+            if (event.key === "Escape") {
+                closeModal('modal-termos');
+                closeModal('modal-privacidade');
+                closeModal('modal-lgpd');
+            }
+        });
+    </script>
+    <style>
+        .glass-header {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .bg-grid-pattern {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 font-sans text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="fixed w-full z-50 glass-header transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+
+                <!-- Logo -->
+                <a href="../index.html" class="flex items-center gap-2 group">
+                    <div class="relative">
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-brand-500 to-accent rounded-full opacity-70 blur group-hover:opacity-100 transition duration-200">
+                        </div>
+                        <img src="../Logo Transp.png" alt="Logo Igreja Total"
+                            class="relative h-10 w-auto rounded-lg bg-slate-900">
+                    </div>
+                    <span class="text-xl font-bold text-white tracking-tight">Igreja<span
+                            class="text-brand-400">Total</span> <span
+                            class="text-xs text-slate-400 font-normal ml-1">Ajuda</span></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#funcionalidades"
+                        class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Funcionalidades</a>
+                    <a href="../index.html#site"
+                        class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Site
+                        Automático</a>
+                    <a href="../index.html#planos"
+                        class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Planos</a>
+
+                    <a href="https://wa.me/message/54NDQSNM2IMUA1"
+                        class="bg-brand-600 hover:bg-brand-500 text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg hover:shadow-brand-500/20 transform hover:-translate-y-0.5">
+                        Falar com Suporte
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section da Ajuda -->
+    <section class="bg-dark pt-32 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-brand-900/10"></div>
+        <div class="absolute inset-0 bg-grid-pattern opacity-30"></div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h1 class="text-3xl md:text-5xl font-bold text-white mb-6">Como podemos ajudar você hoje?</h1>
+            <p class="text-slate-400 text-lg mb-10 max-w-2xl mx-auto">
+                Encontre manuais, tutoriais passo a passo e respostas para suas dúvidas sobre o Igreja Total.
+            </p>
+
+            <!-- Search Bar Styled -->
+            <div class="max-w-xl mx-auto relative group">
+                <div
+                    class="absolute -inset-1 bg-gradient-to-r from-brand-500 to-accent rounded-xl opacity-50 blur group-hover:opacity-75 transition duration-200">
+                </div>
+                <div class="relative bg-white rounded-xl shadow-2xl flex items-center">
+                    <i class="fas fa-search text-slate-400 ml-4 text-xl"></i>
+                    <input type="text" placeholder="Buscar por artigos, tutoriais..."
+                        class="w-full py-4 px-4 rounded-xl text-slate-800 placeholder-slate-400 focus:outline-none text-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Grid -->
+    <main class="container mx-auto px-6 py-16 -mt-10 relative z-20">
+        <div id="grid-categorias" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Os cards serão inseridos aqui via JavaScript -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark border-t border-slate-800 pt-16 pb-8">
+        <div class="container mx-auto px-6">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
+
+                <div class="col-span-1 lg:col-span-2">
+                    <div class="flex items-center gap-0 mb-4">
+                        <img src="../Logo Transp.png" alt="Logo Igreja Total" class="w-20 h-20 rounded-lg -mr-4">
+                        <span class="text-2xl font-bold text-white tracking-tight">Igreja<span
+                                class="text-brand-500">Total</span></span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+                        A plataforma definitiva para pastores e líderes que desejam excelência na gestão e crescimento
+                        do ministério.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6">Produto</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li><a href="../index.html#funcionalidades"
+                                class="hover:text-brand-400 transition-colors">Funcionalidades</a></li>
+                        <li><a href="../index.html#site" class="hover:text-brand-400 transition-colors">Site
+                                Automático</a></li>
+                        <li><a href="../index.html#ebd-media" class="hover:text-brand-400 transition-colors">Plataforma
+                                de ensino</a></li>
+                        <li><a href="../index.html#planos" class="hover:text-brand-400 transition-colors">Planos e
+                                Preços</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6">Recursos</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-brand-400 transition-colors">Tutorial do Sistema</a></li>
+                        <li><a href="ajuda.html" class="hover:text-brand-400 transition-colors">Central de Ajuda</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6">Legal</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li><a href="javascript:void(0)" onclick="openModal('modal-termos')"
+                                class="hover:text-brand-400 transition-colors">Termos de Uso</a></li>
+                        <li><a href="javascript:void(0)" onclick="openModal('modal-privacidade')"
+                                class="hover:text-brand-400 transition-colors">Política de Privacidade</a></li>
+                        <li><a href="javascript:void(0)" onclick="openModal('modal-lgpd')"
+                                class="hover:text-brand-400 transition-colors">LGPD</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-xs">© 2026 Igreja Total Tecnologia. Todos os direitos reservados.</p>
+                <div class="flex gap-4">
+                    <a href="https://www.instagram.com/igrejatotal" target="_blank" rel="noopener noreferrer"
+                        class="text-slate-400 font-bold hover:text-brand-700 transition-colors">
+                        <i class="fab fa-instagram text-lg"></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook text-lg"></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                        <i class="fab fa-youtube text-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals (Duplicated for consistent functionality) -->
+    <div id="modal-termos" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-labelledby="modal-title" role="dialog"
+        aria-modal="true">
+        <div class="fixed inset-0 bg-black bg-opacity-75 transition-opacity" onclick="closeModal('modal-termos')"></div>
+        <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+            <div
+                class="relative transform overflow-hidden rounded-2xl bg-slate-900 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl border border-slate-700">
+                <div class="bg-slate-800 px-4 py-3 sm:px-6 flex justify-between items-center">
+                    <h3 class="text-lg font-bold leading-6 text-white">Termos de Uso</h3>
+                    <button type="button" onclick="closeModal('modal-termos')"
+                        class="text-slate-400 hover:text-white transition-colors"><i
+                            class="fas fa-times text-xl"></i></button>
+                </div>
+                <div
+                    class="px-6 py-6 max-h-[70vh] overflow-y-auto text-slate-300 text-sm space-y-4 leading-relaxed scrollbar-thin scrollbar-thumb-slate-600 scrollbar-track-slate-800">
+                    <p>Consulte a página principal para os termos completos.</p>
+                </div>
+                <div class="bg-slate-800 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                    <button type="button" onclick="closeModal('modal-termos')"
+                        class="mt-3 inline-flex w-full justify-center rounded-lg bg-slate-700 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-600 sm:mt-0 sm:w-auto">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional modals can be added similarly, simpler placeholders for now as content is in main index -->
+    <div id="modal-privacidade" class="fixed inset-0 z-50 hidden overflow-y-auto" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-black bg-opacity-75 transition-opacity" onclick="closeModal('modal-privacidade')">
+        </div>
+        <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+            <div
+                class="relative transform overflow-hidden rounded-2xl bg-slate-900 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl border border-slate-700">
+                <div class="bg-slate-800 px-4 py-3 sm:px-6 flex justify-between items-center">
+                    <h3 class="text-lg font-bold leading-6 text-white">Política de Privacidade</h3>
+                    <button type="button" onclick="closeModal('modal-privacidade')"
+                        class="text-slate-400 hover:text-white transition-colors"><i
+                            class="fas fa-times text-xl"></i></button>
+                </div>
+                <div class="px-6 py-6 text-slate-300 text-sm">Consulte a página principal para a política completa.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-lgpd" class="fixed inset-0 z-50 hidden overflow-y-auto" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-black bg-opacity-75 transition-opacity" onclick="closeModal('modal-lgpd')"></div>
+        <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+            <div
+                class="relative transform overflow-hidden rounded-2xl bg-slate-900 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl border border-slate-700">
+                <div class="bg-slate-800 px-4 py-3 sm:px-6 flex justify-between items-center">
+                    <h3 class="text-lg font-bold leading-6 text-white">LGPD</h3>
+                    <button type="button" onclick="closeModal('modal-lgpd')"
+                        class="text-slate-400 hover:text-white transition-colors"><i
+                            class="fas fa-times text-xl"></i></button>
+                </div>
+                <div class="px-6 py-6 text-slate-300 text-sm">Consulte a página principal para informações LGPD.</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="manuais.js"></script>
+    <script>
+        // Função para carregar a grade inicial
+        document.addEventListener('DOMContentLoaded', () => {
+            renderizarCategorias();
+        });
+    </script>
+</body>
+
+</html>

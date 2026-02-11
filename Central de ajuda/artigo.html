@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Ajuda - Igreja Total</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            900: '#1e3a8a',
+                        },
+                        accent: '#06b6d4',
+                        dark: '#0f172a',
+                        surface: '#1e293b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Scrollbar customizada para o sidebar */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 20px;
+        }
+
+        .sidebar-active {
+            background-color: #eff6ff;
+            /* brand-50 */
+            color: #2563eb;
+            /* brand-600 */
+            border-right: 3px solid #2563eb;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-slate-800 font-sans h-screen flex overflow-hidden">
+
+    <!-- Mobile Header (Visible only on mobile) -->
+    <header
+        class="md:hidden fixed top-0 w-full bg-white border-b border-slate-200 z-50 flex items-center justify-between px-4 py-3 h-16">
+        <div class="flex items-center gap-2">
+            <button onclick="toggleSidebar()" class="text-slate-500 hover:text-slate-700">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            <span class="font-bold text-slate-800">Igreja Total</span>
+        </div>
+        <a href="ajuda.html" class="text-sm text-brand-600 font-semibold">Sair</a>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar"
+        class="fixed inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 w-72 bg-white border-r border-slate-200 z-40 transition-transform duration-300 ease-in-out flex flex-col h-full">
+
+        <!-- Sidebar Header -->
+        <div class="p-4 border-b border-slate-100 flex items-center justify-between h-16 shrink-0">
+            <a href="ajuda.html" class="flex items-center gap-2 group">
+                <img src="../Logo Transp.png" alt="Logo" class="h-8 w-8 rounded bg-slate-900">
+                <div class="flex flex-col">
+                    <span class="font-bold text-slate-800 text-sm leading-tight">Central de Ajuda</span>
+                    <span class="text-xs text-slate-400">Voltar para o início</span>
+                </div>
+            </a>
+            <button onclick="toggleSidebar()" class="md:hidden text-slate-400">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Search Sidebar -->
+        <div class="p-4 border-b border-slate-100 shrink-0">
+            <div class="relative">
+                <i class="fas fa-search absolute left-3 top-2.5 text-slate-400 text-sm"></i>
+                <input type="text" placeholder="Buscar..."
+                    class="w-full bg-slate-50 border border-slate-200 rounded-lg py-2 pl-9 pr-3 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500">
+            </div>
+        </div>
+
+        <!-- Navigation Links Container -->
+        <div id="sidebar-content" class="flex-1 overflow-y-auto custom-scrollbar p-2 space-y-1">
+            <!-- Content injected via JS -->
+        </div>
+
+        <!-- Sidebar Footer -->
+        <div class="p-4 border-t border-slate-100 shrink-0 bg-slate-50">
+            <a href="https://wa.me/message/54NDQSNM2IMUA1" target="_blank"
+                class="flex items-center gap-2 text-sm text-slate-600 hover:text-brand-600 transition-colors">
+                <i class="fab fa-whatsapp text-green-500"></i> Falar com Suporte
+            </a>
+        </div>
+    </aside>
+
+    <!-- Overlay for mobile sidebar -->
+    <div id="sidebar-overlay" onclick="toggleSidebar()" class="fixed inset-0 bg-black/50 z-30 hidden md:hidden glass">
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 h-full overflow-y-auto pt-16 md:pt-0 scroll-smooth w-full">
+        <div class="max-w-4xl mx-auto px-6 py-10 md:py-12 min-h-full">
+
+            <!-- Breadcrumbs -->
+            <nav class="flex text-sm text-slate-500 mb-6" id="breadcrumbs">
+                <a href="ajuda.html" class="hover:text-brand-600">Início</a>
+                <span class="mx-2">/</span>
+                <span id="breadcrumb-current" class="text-slate-800 font-medium">...</span>
+            </nav>
+
+            <!-- Dynamic Content -->
+            <div id="main-content" class="animate-fade-up">
+                <!-- Content injected via JS -->
+                <div class="flex justify-center py-20">
+                    <i class="fas fa-circle-notch fa-spin text-brand-500 text-3xl"></i>
+                </div>
+            </div>
+
+            <!-- Article Footer (Feedback) -->
+            <div id="article-footer" class="mt-16 pt-8 border-t border-slate-200 hidden">
+                <h4 class="font-bold text-slate-800 mb-4 text-sm">Esse artigo foi útil?</h4>
+                <div class="flex gap-3">
+                    <button
+                        class="flex items-center gap-2 px-3 py-1.5 bg-white border border-slate-200 hover:border-brand-300 hover:text-brand-600 text-slate-600 rounded text-sm transition-colors">
+                        <i class="far fa-thumbs-up"></i> Sim
+                    </button>
+                    <button
+                        class="flex items-center gap-2 px-3 py-1.5 bg-white border border-slate-200 hover:border-red-300 hover:text-red-600 text-slate-600 rounded text-sm transition-colors">
+                        <i class="far fa-thumbs-down"></i> Não
+                    </button>
+                </div>
+            </div>
+
+            <div class="h-20 sm:hidden"></div> <!-- Spacer for mobile -->
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="manuais.js"></script>
+    <script>
+        // State
+        const params = new URLSearchParams(window.location.search);
+        let currentId = params.get('id');
+        let currentCategory = params.get('categoria');
+
+        // --- Sidebar Logic ---
+        function renderSidebar() {
+            const container = document.getElementById('sidebar-content');
+            if (!container || typeof dadosManuais === 'undefined') return;
+
+            container.innerHTML = dadosManuais.map(categoria => {
+                // Check if this category is active (either directly selected or contains the active article)
+                const isCategoryActive = currentCategory === categoria.id;
+                const containsActiveArticle = categoria.artigos.some(a => a.id == currentId);
+                const isOpen = isCategoryActive || containsActiveArticle;
+
+                return `
+                <div class="mb-1">
+                    <button onclick="navigateToCategory('${categoria.id}')" 
+                        class="w-full flex items-center justify-between px-3 py-2 text-sm font-semibold rounded-md transition-colors 
+                        ${isCategoryActive ? 'text-brand-700 bg-brand-50' : 'text-slate-700 hover:bg-slate-100'}">
+                        <div class="flex items-center gap-2">
+                            <i class="fas ${categoria.icone} w-4 text-center ${isCategoryActive ? 'text-brand-600' : 'text-slate-400'}"></i>
+                            <span>${categoria.titulo}</span>
+                        </div>
+                        <i class="fas fa-chevron-right text-xs transition-transform duration-200 ${isOpen ? 'rotate-90 text-slate-400' : 'text-slate-300'}"></i>
+                    </button>
+                    
+                    <div class="${isOpen ? 'block' : 'hidden'} pl-9 pr-2 py-1 space-y-0.5">
+                        ${categoria.artigos.map(artigo => {
+                    const isArticleActive = artigo.id == currentId;
+                    return `
+                                <a href="?id=${artigo.id}" 
+                                   class="block px-3 py-1.5 text-sm rounded-md border-l-2 transition-all
+                                   ${isArticleActive
+                            ? 'border-brand-500 text-brand-700 bg-brand-50/50 font-medium'
+                            : 'border-transparent text-slate-500 hover:text-slate-900 hover:bg-slate-50'}">
+                                    ${artigo.titulo}
+                                </a>
+                            `;
+                }).join('')}
+                    </div>
+                </div>
+            `}).join('');
+        }
+
+        // --- Main Content Logic ---
+        function renderContent() {
+            const contentDiv = document.getElementById('main-content');
+            const breadcrumbEl = document.getElementById('breadcrumb-current');
+            const footerEl = document.getElementById('article-footer');
+
+            // 1. Article View
+            if (currentId) {
+                // Find article
+                let foundArticle = null;
+                let foundCategory = null;
+
+                for (let cat of dadosManuais) {
+                    const art = cat.artigos.find(a => a.id == currentId);
+                    if (art) {
+                        foundArticle = art;
+                        foundCategory = cat;
+                        break;
+                    }
+                }
+
+                if (foundArticle) {
+                    // Update Page Title
+                    document.title = `${foundArticle.titulo} - Ajuda Igreja Total`;
+
+                    // Update Breadcrumb
+                    breadcrumbEl.innerHTML = `
+                        <a href="?categoria=${foundCategory.id}" class="hover:text-brand-600">${foundCategory.titulo}</a>
+                        <span class="mx-2">/</span>
+                        <span>${foundArticle.titulo}</span>
+                    `;
+
+                    // Render Article
+                    contentDiv.innerHTML = `
+                        <div class="mb-8">
+                            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-brand-800 mb-4">
+                                ${foundCategory.titulo}
+                            </span>
+                            <h1 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-4">${foundArticle.titulo}</h1>
+                        </div>
+                        
+                        <div class="prose prose-slate max-w-none prose-lg text-slate-600 leading-relaxed">
+                            ${foundArticle.conteudo || renderEmptyContent()}
+                        </div>
+                    `;
+                    footerEl.classList.remove('hidden');
+                    return;
+                }
+            }
+
+            // 2. Category (Module) Overview View
+            if (currentCategory) {
+                const category = dadosManuais.find(c => c.id === currentCategory);
+
+                if (category) {
+                    document.title = `${category.titulo} - Ajuda Igreja Total`;
+                    breadcrumbEl.innerText = category.titulo;
+
+                    contentDiv.innerHTML = `
+                        <div class="mb-10">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center">
+                                    <i class="fas ${category.icone} text-2xl text-brand-600"></i>
+                                </div>
+                                <h1 class="text-3xl font-bold text-slate-900">Módulo ${category.titulo}</h1>
+                            </div>
+                            <p class="text-lg text-slate-600 leading-relaxed max-w-3xl">
+                                ${category.descricao || "Explore os manuais e tutoriais deste módulo."}
+                            </p>
+                        </div>
+
+                        <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">Artigos disponíveis neste módulo</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            ${category.artigos.map(artigo => `
+                                <a href="?id=${artigo.id}" 
+                                   class="group block p-6 bg-white border border-slate-200 rounded-xl hover:shadow-md hover:border-brand-200 transition-all">
+                                    <h3 class="font-bold text-slate-800 group-hover:text-brand-600 mb-2 flex items-center gap-2">
+                                        <i class="far fa-file-alt text-slate-400 group-hover:text-brand-400"></i>
+                                        ${artigo.titulo}
+                                    </h3>
+                                    <p class="text-sm text-slate-500">Clique para ler o passo a passo completo.</p>
+                                </a>
+                            `).join('')}
+                        </div>
+                    `;
+                    footerEl.classList.add('hidden');
+                    return;
+                }
+            }
+
+            // 3. Fallback / 404
+            console.log("Fallback view triggered");
+            contentDiv.innerHTML = `
+                <div class="text-center py-20">
+                    <i class="fas fa-search text-slate-200 text-6xl mb-4"></i>
+                    <h2 class="text-2xl font-bold text-slate-700">Selecione um tópico</h2>
+                    <p class="text-slate-500">Escolha um item no menu lateral para começar.</p>
+                </div>
+            `;
+            footerEl.classList.add('hidden');
+        }
+
+        function renderEmptyContent() {
+            return `
+                <div class="p-8 bg-slate-50 rounded-xl border border-dashed border-slate-300 text-center">
+                    <i class="fas fa-pencil-ruler text-slate-300 text-4xl mb-3"></i>
+                    <p class="text-slate-500 font-medium">Conteúdo em construção</p>
+                    <p class="text-sm text-slate-400">Em breve este tutorial estará disponível.</p>
+                </div>
+            `;
+        }
+
+        function navigateToCategory(catId) {
+            // If already on this category, do nothing or maybe just reload?
+            // Simple navigation
+            window.location.href = `?categoria=${catId}`;
+        }
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+
+            if (sidebar.classList.contains('-translate-x-full')) {
+                sidebar.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            } else {
+                sidebar.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // If no params, default to first category? Or show a welcome?
+            // If nothing selected, maybe select the first available category to avoid empty state
+            if (!currentId && !currentCategory && typeof dadosManuais !== 'undefined' && dadosManuais.length > 0) {
+                // Redirect to first category if user lands on clean artigo.html
+                window.location.replace(`?categoria=${dadosManuais[0].id}`);
+                return;
+            }
+
+            renderSidebar();
+            renderContent();
+        });
+
+    </script>
+</body>
+
+</html>
