@@ -735,7 +735,47 @@ const dadosManuais = [
                 `
             }
         ]
+    },
+
+
+    {
+        id: "afiliados",
+        titulo: "AFILIADOS",
+        icone: "fa-handshake-simple", // Ícone de aperto de mão (parceria)
+        descricao: "Indique o Igreja Total e ganhe recompensas. Acompanhe suas comissões e materiais de divulgação.",
+        artigos: [
+            {
+                id: 30,
+                titulo: "Manual de Afiliados",
+                conteudo: `
+                    <div class="flex flex-col items-center justify-center py-12 text-center border-2 border-dashed border-slate-200 rounded-xl bg-slate-50">
+                        
+                        <div class="bg-amber-100 p-6 rounded-full mb-6 animate-pulse">
+                            <i class="fas fa-person-digging text-amber-500 text-4xl"></i>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold text-slate-800 mb-3">Estamos preparando este material!</h3>
+                        
+                        <p class="text-slate-500 max-w-lg leading-relaxed mb-6">
+                            O módulo de Afiliados está passando por ajustes finais. 
+                            Em breve, você terá acesso a um guia completo sobre como funciona nosso programa de parcerias, regras de comissionamento e dicas para divulgar o <strong>Igreja Total</strong>.
+                        </p>
+
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200 max-w-md w-full text-left">
+                            <h4 class="font-bold text-slate-700 text-sm uppercase mb-2 border-b border-slate-100 pb-2">O que vem por aí:</h4>
+                            <ul class="space-y-2 text-sm text-slate-600">
+                                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Como gerar seu link exclusivo</li>
+                                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Painel de acompanhamento de vendas</li>
+                                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Regras de saque das comissões</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                `
+            }
+        ]
     }
+
 ];
 
 // Função que desenha os cards na tela ajuda.html
